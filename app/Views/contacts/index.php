@@ -32,10 +32,6 @@
                             <td class="text-center">
                                 <a href="<?=base_url('contacts/edit/'.$user['id']) ?>"  class="btn btn-success btn-sm">Edit</a>
                                 <a href="<?= base_url('contacts/delete/'. $user['id']) ?>" class="btn btn-warning btn-sm">Disable</a>
-                                <!--<form action="<?/*= base_url('contacts/hard-delete/'.$user['id'])*/?>" method="post">
-                                    <input type="hidden" name="_method" value="delete"/>
-                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                                </form>-->
                             </td>
 
                         </tr>

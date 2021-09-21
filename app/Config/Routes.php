@@ -39,7 +39,6 @@ $routes->post('contacts/store', 'Users::store');
 $routes->get('contacts/edit/(:num)','Users::edit/$1');
 $routes->put('contacts/update/(:num)','Users::update/$1');
 $routes->get('contacts/delete/(:num)','Users::delete/$1');
-$routes->delete('contacts/hard-delete/(:num)','Users::hardDelete/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
