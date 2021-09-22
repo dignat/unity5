@@ -33,12 +33,12 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/contacts', 'Contacts::index');
-$routes->get('/contacts/create', 'Contacts::add');
-$routes->post('/contacts/store', 'Contacts::store');
-$routes->get('/contacts/edit/(:num)','Contacts::edit/$1');
-$routes->put('/contacts/update/(:num)','Contacts::update/$1');
-$routes->get('/contacts/delete/(:num)','Contacts::delete/$1');
+$routes->get('contacts', 'Contacts::index');
+$routes->get('contacts/create', 'Contacts::add');
+$routes->post('contacts/store', 'Contacts::store');
+$routes->get('contacts/edit/(:num)','Contacts::edit/$1');
+$routes->put('contacts/update/(:num)','Contacts::update/$1');
+$routes->get('contacts/delete/(:num)','Contacts::delete/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
