@@ -19,7 +19,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Users');
+$routes->setDefaultController('Contacts');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -33,12 +33,12 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('contacts', 'Users::index');
-$routes->get('contacts/create', 'Users::add');
-$routes->post('contacts/store', 'Users::store');
-$routes->get('contacts/edit/(:num)','Users::edit/$1');
-$routes->put('contacts/update/(:num)','Users::update/$1');
-$routes->get('contacts/delete/(:num)','Users::delete/$1');
+$routes->get('contacts', 'Contacts::index');
+$routes->get('contacts/create', 'Contacts::add');
+$routes->post('contacts/store', 'Contacts::store');
+$routes->get('contacts/edit/(:num)','Contacts::edit/$1');
+$routes->put('contacts/update/(:num)','Contacts::update/$1');
+$routes->get('contacts/delete/(:num)','Contacts::delete/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

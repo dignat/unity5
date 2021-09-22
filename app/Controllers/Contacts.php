@@ -2,12 +2,12 @@
 
 namespace App\Controllers;
 
-use App\Models\UserModel;
+use App\Models\ContactModel;
 
-class Users extends BaseController
+class Contacts extends BaseController
 {
     public function index() {
-        $user_model = new UserModel();
+        $user_model = new ContactModel();
         /*$data['users'] = $user_model->orderBy('id', 'DESC')->paginate(10);
         $data['pagination_link'] = $user_model->pager;*/
         $data['users'] = $user_model->findAll();
@@ -19,7 +19,7 @@ class Users extends BaseController
     }
 
     public function store() {
-        $contact_model = new UserModel();
+        $contact_model = new ContactModel();
         $data = [
             'first_name' => $this->request->getPost('first_name'),
             'family_name' => $this->request->getPost('family_name'),
@@ -33,13 +33,13 @@ class Users extends BaseController
     }
 
     public function edit(int $userId) {
-        $contact = new UserModel();
+        $contact = new ContactModel();
         $data['contact'] = $contact->find($userId);
         return view('contacts/edit', $data);
     }
 
     public function update(int $userId) {
-        $contact = new UserModel();
+        $contact = new ContactModel();
         $data = [
             'first_name' => $this->request->getPost('first_name'),
             'family_name' => $this->request->getPost('family_name'),
@@ -52,14 +52,14 @@ class Users extends BaseController
     }
 
     public function delete(int $userId) {
-        $contact = new UserModel();
+        $contact = new ContactModel();
         $contact->delete($userId);
         return redirect()->to(base_url('/'))->with('status', 'Contact deleted');
 
     }
 
     public function hardDelete(int $userId) {
-        $contact = new UserModel();
+        $contact = new ContactModel();
         $contact->delete($userId);
         return redirect()->to(base_url('/'))->with('status', 'Contact deleted');
 
