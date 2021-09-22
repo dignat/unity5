@@ -22,6 +22,7 @@
                         </tr>
                         </thead>
                         <tbody>
+                        <?php if (count($users) > 0): ?>
                         <?php foreach ($users as $user): ?>
                         <tr>
                             <td><?= $user['id'] ?></td>
@@ -36,6 +37,7 @@
 
                         </tr>
                         <?php endforeach; ?>
+                        <?php endif; ?>
                         </tbody>
                     </table>
                 </div>
