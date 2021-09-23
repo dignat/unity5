@@ -12,7 +12,7 @@
             <div class="card">
                 <div class="card-header">
                     <h4>Add Contact</h4>
-                    <a href="<?= base_url('/')?>"  class="btn btn-primary float-end">Back</a>
+                    <a href="<?= base_url('contacts')?>"  class="btn btn-primary float-end">Back</a>
                 </div>
                 <div class="card-body">
                     <form method="post" action="<?= base_url('contacts/store') ?>">

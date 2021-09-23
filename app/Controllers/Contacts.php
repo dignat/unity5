@@ -11,8 +11,7 @@ class Contacts extends BaseController
         /*$data['users'] = $user_model->orderBy('id', 'DESC')->paginate(10);
         $data['pagination_link'] = $user_model->pager;*/
         $data['users'] = $user_model->findAll();
-        echo 'Hi';
-        //return view('contacts/index', $data);
+        return view('contacts/index', $data);
     }
 
     public function add() {
