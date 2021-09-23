@@ -23,7 +23,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'https://unity5.herokuapp.com/public';
+    public $baseURL = 'https://unity5.herokuapp.com/';
 
     /**
      * --------------------------------------------------------------------------
