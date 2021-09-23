@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     <h4>Contacts</h4>
-                    <a href="<?= base_url('contacts/create')?>"  class="btn btn-primary float-end">Add Contact</a>
+                    <a href="<?= site_url('contacts/create')?>"  class="btn btn-primary float-end">Add Contact</a>
                 </div>
                 <div class="card-body">
                     <table class="table table-bordered">
@@ -31,8 +31,8 @@
                             <td><?= $user['email'] ?></td>
                             <td><?= $user['phone'] ?></td>
                             <td class="text-center">
-                                <a href="<?=base_url('contacts/edit/'.$user['id']) ?>"  class="btn btn-success btn-sm">Edit</a>
-                                <a href="<?= base_url('contacts/delete/'. $user['id']) ?>" class="btn btn-warning btn-sm">Disable</a>
+                                <a href="<?=site_url('contacts/edit/'.$user['id']) ?>"  class="btn btn-success btn-sm">Edit</a>
+                                <a href="<?= site_url('contacts/delete/'. $user['id']) ?>" class="btn btn-warning btn-sm">Disable</a>
                             </td>
 
                         </tr>

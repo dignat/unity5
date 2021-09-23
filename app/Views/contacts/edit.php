@@ -11,10 +11,10 @@
         <div class="card">
             <div class="card-header">
                 <h4>Update User</h4>
-                <a href="<?= base_url('/')?>"  class="btn btn-primary float-end">Back</a>
+                <a href="<?= site_url('contacts/index')?>"  class="btn btn-primary float-end">Back</a>
             </div>
             <div class="card-body">
-                <form method="post" action="<?= base_url('contacts/update/'.$contact['id']) ?>">
+                <form method="post" action="<?= site_url('contacts/update/'.$contact['id']) ?>">
                     <input type="hidden" value="PUT" name="_method"/>
                     <div class="row">
                         <div class="col-md-6">
