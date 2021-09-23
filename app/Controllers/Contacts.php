@@ -7,12 +7,15 @@ use App\Models\ContactModel;
 class Contacts extends BaseController
 {
     public function index() {
-       // $user_model = new ContactModel();
-        /*$data['users'] = $user_model->orderBy('id', 'DESC')->paginate(10);
-        $data['pagination_link'] = $user_model->pager;*/
-       // $data['users'] = $user_model->findAll();
-        echo 'Hi';
-        //return view('contacts/index', $data);
+       try {
+           $user_model = new ContactModel();
+           /*$data['users'] = $user_model->orderBy('id', 'DESC')->paginate(10);
+           $data['pagination_link'] = $user_model->pager;*/
+           $data['users'] = $user_model->findAll();
+           return view('contacts/index', $data);
+       } catch (\Exception $e) {
+           echo $e->getMessage();
+        }
     }
 
     public function add() {
