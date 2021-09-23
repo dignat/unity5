@@ -14,7 +14,7 @@ class Contacts extends BaseController
            $data['users'] = $user_model->findAll();
            return view('contacts/index', $data);
        } catch (\Exception $e) {
-           echo $e->getMessage();
+           return view('errors/html/error_404');
         }
     }
 
